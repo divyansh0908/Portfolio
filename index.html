@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +12,9 @@
     <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="assets/favicons/favicon.ico">
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <!-- Add this script tag to include the Lightbox library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
@@ -23,6 +25,9 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
+    <!--=============== JS ===============-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -30,10 +35,36 @@
 </head>
 
 <body>
+    <!--=============== ANIMATION ===============-->
+        <!-- <div class="glowing">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+
+        <div class="glowing">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+
+        <div class="glowing">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+
+        <div class="glowing">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div> -->
+
+        
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Portfolio</a>
+            <a href="#" class="nav__logo">Kamlesh Kumar</a>
 
             <div class="nav__menu">
                 <ul class="nav__list">
@@ -50,14 +81,26 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
+                        <a href="#education" class="nav__link">
                             <i class='bx bx-book'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2'></i>
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bxs-badge-check'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#achievements" class="nav__link">
+                            <i class='bx bx-medal'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#testimonials" class="nav__link">
+                            <i class='bx bx-award'></i>
                         </a>
                     </li>
 
@@ -69,14 +112,12 @@
                 </ul>
             </div>
 
-            <!--=============== theme change button ===============-->
-            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
-
         </nav>
     </header>
 
     <!--=============== MAIN ===============-->
     <main class="main">
+    
         <!--=============== HOME ===============-->
         <section class="home section" id="home">
             <div class="home__container container grid">
@@ -84,15 +125,14 @@
                     <span class="home__greeting">Hello, I'm</span>
                     <h1 class="home__name">Kamlesh Kumar</h1>
                     <div class="home__education-container">
-                    <h3 class="home__education" id="educationText">Grad Student at San Jose State University, San Jose, California.</h3>
-</div>
+                        <h3 class="home__education" id="educationText">Grad Student at San Jose State University, San Jose, California.</h3>
+                    </div>
 
                     <div class="home__button">
                         <a download="" href="https://drive.google.com/file/d/1gN-ONHyXa1JZK-Ah4cskFDe9yhAz9gJ0/view?usp=sharing"
                             class="button button--ghost">
                             View Resume
                         </a>
-
                         <a href="#about" class="button">About</a>
                     </div>
                 </div>
@@ -269,7 +309,7 @@
             <div class="skills__container container grid">
                 <div class="skills__content">
                     <h3 class="skills__title">Student Research Assistant</h3>
-<span class="section__subtitle">October 2023- Present</span>
+                    <span class="section__subtitle">October 2023- Present</span>
 
                     <div class="skills__box">
                         <div class="skills__group">
@@ -355,7 +395,7 @@
 
                 <div class="skills__content">
                     <h3 class="skills__title">ML Engineering Intern</h3>
-<span class="section__subtitle mb-8">December 2022 - May 2023</span>
+                    <span class="section__subtitle mb-8">December 2022 - May 2023</span>
 
                     <div class="skills__box">
                         <div class="skills__group">
@@ -439,7 +479,7 @@
                     </div>
                 </div>
 
-        <div class="skills__content">
+                <div class="skills__content">
                     <h3 class="skills__title">Computer Vision Developer</h3>
                     <span class="section__subtitle mb-8">August 2021 - October 2021</span>
 
@@ -469,7 +509,7 @@
                                 <div>
                                     <h3 class="skills__name">PyQt5</h3>
 
-            </div>
+                </div>
 
             
                 </div>
@@ -478,13 +518,202 @@
                                 <i class='bx bxs-badge-check'></i>
                     <div>
                                     <h3 class="skills__name">Azure</h3>
-                </div>
+                    </div>
                 </div>
 
+                </div>
             </div>
-                            </div>
 
-                    </section>
+        </section>
+
+
+        <!--=============== ACHIEVEMENTS ===============-->
+        <section class="achievements section" id="achievements">
+            <span class="section__subtitle">My Achievements</span>
+            <h2 class="section__title">Patents and Publications</h2>
+        
+            <div class="achievements__container container grid">
+                <!-- Patents -->
+                <div class="achievements__content">
+                    <h3 class="section__title bx bx-medal achievements__icon"> Patents</h3>
+        
+                    <div class="achievements__box">
+                        <div class="achievements__data">
+                            <div>
+                                <h3 class="general__subtitle achievements__name education__list-item">Method And System Of Counting And Collecting Objects In Packaging Automation Platform.</h3>
+                                <h4>· IN408712 · Issued Oct 10, 2022</h4>
+                                <p class="achievements__description">Revolutionizes the way objects are counted and collected in packaging automation. This innovative system enhances
+                                efficiency, accuracy, and speed, paving the way for seamless operations in the packaging industry.</p>
+                            </div>
+                        </div>
+                        <div class="achievements__data">
+                            <div>
+                                <h3 class="general__subtitle achievements__name education__list-item">System For Detecting Positional Accuracy Of Workpieces In Jewellery Artwork And Method Thereof.</h3>
+                                <h4>· IN433775 · Issued Jun 6, 2023</h4>
+                                <p class="achievements__description">Introduces a groundbreaking system that ensures precise positional accuracy of workpieces in jewellery artwork. This
+                                cutting-edge solution empowers craftsmen to create intricate and flawless designs, elevating the artistry in the jewelry
+                                industry.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Add more patent entries as needed -->
+                    </div>
+                </div>
+        
+                <!-- Publications -->
+                <div class="achievements__content">
+                    <h3 class="section__title bx bx-book-open achievements__icon"> Publications</h3>
+        
+                    <div class="achievements__box">
+                        <div class="achievements__data">
+                            <div>
+                                <h4 class="education__list-item">INSOMNet: Automated insomnia detection using scalogram and deep neural networks with ECG signalsINSOMNet: Automated
+                                insomnia detection using scalogram and deep neural networks with ECG signals.</h4>
+                                <p class="achievements__description">Medical Engineering Physics, Elsevier · Jul 25, 2023 · <a href="https://doi.org/10.1016/j.medengphy.2023.104028" target="_blank">DOI: 10.1016/j.medengphy.2023.104028</a></p>
+                                <br>
+                                <h4 class="education__list-item">A Real-Time Object Counting and Collecting Device for Industrial Automation Process using Machine Vision.</h4>
+                                <p class="achievements__description">IEEE Sensors Journal · Apr 10, 2023 · <a href="https://ieeexplore.ieee.org/document/10105906/" target="_blank">DOI: 10.1109/JSEN.2023.3267101</a></p>
+                                <br>
+                                <h4 class="education__list-item">Pulse oximetry SpO2 signal for automated identification of sleep apnea: a review and future trends.</h4>
+                                <p class="achievements__description">IOP Science · Nov 25, 2022 · <a href="https://doi.org/10.1088/1361-6579/ac98f0" target="_blank">DOI: 10.1088/1361-6579/ac98f0</a></p>
+                                <br>
+                                <h4 class="education__list-item">Artificial Intelligence and Machine Learning Based Intervention in Medical Infrastructure: A Review and Future Trends.</h4>
+                                <p class="achievements__description">MDPI Healthcare · Jan 10, 2023 · <a href="https://www.mdpi.com/2227-9032/11/2/207" target="_blank">DOI: 10.3390/healthcare11020207</a></p>
+                        </div>
+        
+                        <!-- Add more publication entries as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--=============== TESTIMONIALS ===============-->
+        <section class="testimonials section" id="testimonials">
+            <span class="section__subtitle">What Others Say</span>
+            <h2 class="section__title">Testimonials</h2>
+        
+            <div class="testimonials__container ">
+                <div class="testimonials__grid grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonials__item">
+                        <div class="testimonials__data">
+                            <div class="testimonials__content">
+                                <div class="testimonials__img-container">
+                                    <img src="assets/img/ketan.jpeg" alt="Ketan Bansal" class="testimonials__img">
+                                </div>
+                                <div class="testimonials__info">
+                                    <h3 class="testimonials__name">
+                                        <a href="https://www.linkedin.com/in/ketan-bansal" target="_blank" style="color: #000000;">
+                                            Ketan Bansal <i class='bx bxl-linkedin footer__social-icon' style="color: #0c207a;"></i></a>
+                                    </h3>
+                                    <p class="testimonials__designation">VP Technology, SkyLark Labs.</p>
+                                </div>
+                            </div>
+                            <p class="testimonials__description">"Kamlesh stands out as a remarkably hardworking colleague with a strong
+                                grasp of machine learning. In the time we worked together, his ability to thrive under pressure was truly
+                                impressive. He consistently met tight deadlines, ensuring that our projects not only stayed on track but
+                                also reflected high-quality standards. What I appreciated most about Kamlesh was his reliability. Whenever
+                                there was a crunch, I knew I could count on him to get the job done—and done well. His dedication to swift
+                                and efficient project delivery made a significant impact on our team's success. I wholeheartedly recommend
+                                Kamlesh to anyone looking for a dependable and skilled ML professional who can deliver results when it
+                                matters most."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonials__item">
+                        <div class="testimonials__data">
+                            <div class="testimonials__content">
+                                <div class="testimonials__img-container">
+                                    <img src="assets/img/dhruv.jpeg" alt="Dhruv Shantoshwar" class="testimonials__img">
+                                </div>
+                                <div class="testimonials__info">
+                                    <h3 class="testimonials__name"><a href="https://www.linkedin.com/in/dhruv-santoshwar-288455140/"
+                                            target="_blank" style="color: #000000;">Dhruv Shantoshwar <i class='bx bxl-linkedin footer__social-icon' style="color: #0c207a;"></i></a>
+                                        </h3>
+                                    <p class="testimonials__designation">Director Machine Learning, SkyLark Labs.</p>
+                                </div>
+                            </div>
+                            <p class="testimonials__description">"Kamlesh, our Machine Learning Engineering Intern, showcased exceptional
+                                expertise in PyTorch, Tensorflow, and OpenCV-Python during his tenure. He upgraded over 10 computer vision
+                                pipelines, significantly improving efficiency. Kamlesh's passion for AI led to his promotion as head of the
+                                city surveillance department, where he displayed strong leadership and product management skills. His
+                                journey reflects commitment, talent, and success in a challenging environment. We appreciate Kamlesh's
+                                valuable contributions and anticipate his continued growth. Thank you for your outstanding performance and
+                                dedication, Kamlesh."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonials__item">
+                        <div class="testimonials__data">
+                            <div class="testimonials__content">
+                                <div class="testimonials__img-container">
+                                    <img src="assets/img/bhalerao.jpeg" alt="Raghavendra H. Bhalerao" class="testimonials__img">
+                                </div>
+                                <div class="testimonials__info">
+                                    <h3 class="testimonials__name"><a href="https://www.linkedin.com/in/dr-raghavendra-h-bhalerao-783b917/"
+                                            target="_blank" style="color: #000000;">Dr. Raghavendra H. Bhalerao <i class='bx bxl-linkedin footer__social-icon' style="color: #0c207a;"></i></a>
+                                        </h3>
+                                    <p class="testimonials__designation">Assistant Professor, IITRAM.</p>
+                                </div>
+                            </div>
+                            <p class="testimonials__description">"I enthusiastically recommend Kamlesh for his exceptional work in computer
+                                vision during our fruitful three-year collaboration. Kamlesh's expertise and dedication have resulted in
+                                remarkable achievements, including two granted Indian patents and multiple research publications. Kamlesh
+                                consistently demonstrated an in-depth understanding of computer vision principles, translating them into
+                                practical solutions. His proficiency in developing complex algorithms and models for image analysis
+                                significantly contributed to the success of our projects, which encompassed object recognition, image
+                                segmentation, and visual tracking. Kamlesh's leadership skills shone through his effective project
+                                coordination and mentorship of junior researchers. He fostered a collaborative atmosphere that facilitated
+                                knowledge sharing. His exemplary communication skills played a pivotal role in disseminating our research
+                                findings through publications and presentations. The pinnacle of Kamlesh's achievements was the grant of two
+                                Indian patents, a testament to his innovative problem-solving abilities. Additionally, his research
+                                contributions enhanced our team's reputation in the computer vision community. I wholeheartedly recommend
+                                Kamlesh for future endeavors in computer vision or related fields. His technical prowess, dedication, and
+                                professionalism make him an invaluable asset. I am confident that he will continue to excel and make
+                                significant contributions wherever he chooses to apply his expertise."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonials__item">
+                        <div class="testimonials__data">
+                            <div class="testimonials__content">
+                                <div class="testimonials__img-container">
+                                    <img src="assets/img/prince.jpeg" alt="Prince Kumar" class="testimonials__img">
+                                </div>
+                                <div class="testimonials__info">
+                                    <h3 class="testimonials__name"><a href="https://www.linkedin.com/in/prince-kumar-239304209/"
+                                            target="_blank" style="color: #000000;">Prince Kumar <i class='bx bxl-linkedin footer__social-icon' style="color: #0c207a;"></i></a>
+                                        </h3>
+                                    <p class="testimonials__designation">Computer Vision Engineer</p>
+                                </div>
+                            </div>
+                            <p class="testimonials__description" >"I have had the pleasure of working closely with Kamlesh , and I can
+                                wholeheartedly appreciate him for his exceptional skills and expertise in the fields of computer vision,
+                                deep learning, and machine learning. Kamlesh is a talented and dedicated professional with a strong
+                                foundation in OpenCV, Python, TensorFlow, Keras, and PyTorch. His proficiency in these technologies,
+                                combined with his deep understanding of machine learning concepts, makes him a valuable asset to any team. I
+                                have seen him tackle complex problems with ease and deliver innovative solutions that exceed expectations.
+                                One of Kamlesh's standout qualities is his commitment to continuous learning and staying up-to-date with the
+                                latest developments in the field. His passion for pushing the boundaries of what's possible in computer
+                                vision and deep learning is truly inspiring. Moreover, Kamlesh is not only a skilled practitioner but also
+                                an excellent collaborator. He communicates ideas effectively, works seamlessly with cross-functional teams,
+                                and consistently delivers high-quality results on time. His ability to translate intricate technical
+                                concepts into practical applications is remarkable. It's been a privilege to work alongside Kamlesh, and I
+                                have no doubt that he will continue to excel in his career and make significant contributions to the field
+                                of artificial intelligence."</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
 
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
@@ -503,7 +732,7 @@
                             </a>
                         </div>
 
-</div>
+            </div>
                 </div>
                 <div class="contact__content">
                     <div class="contact__info">
@@ -516,7 +745,7 @@
                                 Connect <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
-</div>
+            </div>
                 </div>
                 <div class="contact__content">
                     <div class="contact__info">
@@ -536,7 +765,7 @@
     </main>
 
     <!--=============== FOOTER ===============-->
-    <footer class="footer">
+    <footer class="footer content">
         <div class="footer__container container">
             <h1 class="footer__title">Kamlesh Kumar</h1>
 
@@ -549,10 +778,16 @@
                     <a href="#about" class="footer__link">About</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#skills" class="footer__link">Skills</a>
+                    <a href="#education" class="footer__link">Education</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#work" class="footer__link">Work</a>
+                    <a href="#skills" class="footer__link">Experience</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#achievements" class="footer__link">Achievements</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#testimonials" class="footer__link">Testimonials</a>
                 </li>
                 <li class="footer__item">
                     <a href="#contact" class="footer__link">Contact</a>
@@ -561,29 +796,19 @@
 
             <ul class="footer__social">
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-facebook footer__social-icon'></i>
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-twitter footer__social-icon'></i>
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://www.linkedin.com/in/kamlesh364" target="_blank" class="footer__social-link">
                         <i class='bx bxl-linkedin footer__social-icon'></i>
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://www.instagram.com/hselmak_kumar/" target="_blank" class="footer__social-link">
                         <i class='bx bxl-instagram footer__social-icon'></i>
                     </a>
                 </li>
             </ul>
 
             <span class="footer__copy">
-                &#169; 2022 kamlesh364
+                &#169; 2023 kamlesh364
             </span>
         </div>
     </footer>
