@@ -285,7 +285,6 @@ body.light-theme {
 .light-theme .button,
 .light-theme .skills__content,
 .light-theme .services__card,
-.light-theme .work__card,
 .light-theme .testimonial__card,
 .light-theme .contact__card,
 .light-theme .contact__form-div {
@@ -883,70 +882,6 @@ body.light-theme {
   opacity: 1;
 }
 
-/*=============== WORK ===============*/
-
-.work__container {
-  padding-top: 1rem;
-}
-
-.work__filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.work__item {
-  cursor: pointer;
-  color: var(--title-color);
-  padding: 0.25rem 0.75rem;
-  font-weight: var(--font-medium);
-  border-radius: 0.5rem;
-}
-
-.work__card {
-  background-color: var(--container-color);
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.work__img {
-  border-radius: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.work__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: 0.25rem;
-}
-
-.work__button {
-  width: max-content;
-  color: var(--first-color);
-  font-size: var(--small-font-size);
-  display: flex;
-  align-items: center;
-  column-gap: 0.25rem;
-  cursor: pointer;
-}
-
-.work__button:hover .work__icon {
-  transform: translateX(0.25rem);
-}
-
-.work__icon {
-  font-size: 1rem;
-  transition: 0.4s;
-}
-
-/* Active item work*/
-.active-work {
-  background-color: var(--first-color);
-  color: var(--body-color);
-}
-
 /*=============== Testimonials Styles ===============*/
 .testimonials {
   padding: 10px 0;
@@ -1295,25 +1230,6 @@ body.light-theme {
     grid-template-columns: 145px;
     justify-content: center;
   }
-
-  .work__item {
-    font-size: var(--small-font-size);
-  }
-
-  .work__filters {
-    column-gap: 0.25rem;
-  }
-}
-
-@media screen and (min-width: 435px) {
-  .work__container {
-    justify-content: center;
-    grid-template-columns: repeat(2, max-content);
-  }
-
-  .work__img {
-    width: 165px;
-  }
 }
 
 /* For medium devices */
@@ -1368,15 +1284,6 @@ body.light-theme {
 
   .services__modal-description {
     padding: 0 3.5rem;
-  }
-
-  .work__container {
-    justify-content: center;
-    grid-template-columns: repeat(2, max-content);
-  }
-
-  .work__img {
-    width: 250px;
   }
 
   .testimonial__container {
@@ -1529,23 +1436,6 @@ body.light-theme {
 
   .services__card {
     padding: 5rem 2rem 1.5rem;
-  }
-
-  .work__container {
-    grid-template-columns: repeat(3, max-content);
-    gap: 3rem;
-  }
-
-  .work__card {
-    padding: 1.25rem;
-  }
-
-  .work__img {
-    margin-bottom: 2rem;
-  }
-
-  .work__title {
-    margin-bottom: 0.5rem;
   }
 
   .testimonial__container {
