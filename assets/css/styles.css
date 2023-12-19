@@ -83,7 +83,12 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: 0.4s; /* for light mode animation */
-  
+  /* animation: colorChange 5s linear infinite; */
+}
+
+#canvas {
+  position: fixed;
+  z-index: -1;
 }
 
 .glowing {
@@ -102,12 +107,12 @@ body {
 @keyframes colorChange {
   0% {
     filter: hue-rotate(0deg);
-    transform: rotate(0deg);
+    /* transform: rotate(0deg); */
   }
 
   100% {
     filter: hue-rotate(360deg);
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
   }
 }
 

@@ -32,6 +32,77 @@ modalClose.forEach((mc) => {
   });
 });
 
+/*=============== Animation ===============*/
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let stars = []; // array to hold star objects
+let numStars = 100; // number of stars to generate
+
+// resize canvas to fill window
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// star constructor
+function Star(x, y, radius, dx, dy) {
+  this.x = x;
+  this.y = y;
+  this.radius = radius;
+  this.dx = dx;
+  this.dy = dy;
+}
+
+// function to generate a random number
+function randomFromRange(min, max) {
+  return Math.random() * (max - min + 1) + min;
+}
+
+// function to generate stars
+function generateStars() {
+  for (let i = 0; i < numStars; i++) {
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+    let dx = (Math.random() - 0.5) * 0.5;
+    let dy = (Math.random() - 0.5) * 0.5;
+    let radius = Math.random() * 3;
+    stars.push(new Star(x, y, radius, dx, dy));
+  }
+}
+
+// Function to animate stars
+function animateStars() {
+  requestAnimationFrame(animateStars);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Calculate hue based on time for color animation
+  let hue = (Date.now() * 0.0005) % 360;
+
+  for (let i = 0; i < stars.length; i++) {
+    let star = stars[i];
+    star.x += star.dx;
+    star.y += star.dy;
+
+    // Draw the star
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
+    ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.fill();
+
+    // Check if the star is out of the canvas
+    if (star.x + star.radius > canvas.width || star.x - star.radius < 0) {
+      star.dx = -star.dx;
+    }
+
+    if (star.y + star.radius > canvas.height || star.y - star.radius < 0) {
+      star.dy = -star.dy;
+    }
+  }
+}
+
+
+generateStars();
+animateStars();
+
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 let swiperTestimonial = new Swiper(".testimonial__container", {
