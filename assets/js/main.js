@@ -101,8 +101,6 @@ function animateStars() {
   }
 }
 
-
-
 generateStars();
 animateStars();
 

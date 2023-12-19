@@ -890,7 +890,7 @@ body.light-theme {
 /*=============== Testimonials Styles ===============*/
 .testimonials {
   padding: 10px 0;
-  width: auto;
+  width: 100%;
 }
 
 .testimonials__row {
@@ -902,15 +902,15 @@ body.light-theme {
 .testimonials__container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  margin: 0 100px;
+  gap: auto;
+  margin: 0 5%;
 }
 
 .testimonials__grid {
   grid-column: span 1;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  gap: auto;
   /* Increased gap for better spacing */
 }
 
@@ -1240,20 +1240,20 @@ body.light-theme {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    margin: 0 100px;
+    margin: 0 1%;
   }
 
   .testimonials__grid {
     grid-column: span 2;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+    gap: auto;
     /* Increased gap for better spacing */
   }
 
   .testimonials__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: left;
@@ -1367,10 +1367,10 @@ body.light-theme {
     }
 
   .testimonials__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 5%;
   }
   
   .testimonials__grid {
