@@ -74,18 +74,20 @@ function animateStars() {
   requestAnimationFrame(animateStars);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Calculate hue based on time for color animation
-  let hue = (Date.now() * 0.0005) % 360;
-
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
     star.x += star.dx;
     star.y += star.dy;
 
+    // Create a gradient for star color
+    let gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.radius);
+    gradient.addColorStop(0, 'white'); // Start with white color
+    gradient.addColorStop(1, 'orange'); // End with fire-color
+
     // Draw the star
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
-    ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.fillStyle = gradient;
     ctx.fill();
 
     // Check if the star is out of the canvas
@@ -98,6 +100,7 @@ function animateStars() {
     }
   }
 }
+
 
 
 generateStars();
