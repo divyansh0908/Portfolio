@@ -11,6 +11,7 @@
           "scroll-behavior"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
