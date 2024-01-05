@@ -1363,7 +1363,7 @@ body.light-theme {
   }
 
   .skills__container {
-    grid-template-columns: repeat(3, 330px);
+    grid-template-columns: repeat(4, 330px);
     column-gap: 3rem;
   }
 
