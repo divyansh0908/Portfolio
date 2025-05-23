@@ -631,6 +631,8 @@ body.light-theme {
 .skills__container {
   row-gap: 2rem;
   padding-top: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .skills__content {
@@ -1430,3 +1432,4 @@ body.light-theme {
     margin-bottom: 5px;
   }
 }
+
