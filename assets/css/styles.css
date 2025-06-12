@@ -508,6 +508,7 @@ body.light-theme {
 .education__container {
   row-gap: 2rem;
   padding-top: 1rem;
+  margin-horizontal: 'auto';
 }
 
 .education__content {
