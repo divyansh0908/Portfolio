@@ -508,7 +508,6 @@ body.light-theme {
 .education__container {
   row-gap: 2rem;
   padding-top: 1rem;
-  margin-horizontal: 'auto';
 }
 
 .education__content {
@@ -1338,7 +1337,7 @@ body.light-theme {
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    align-items: initial;
     column-gap: 4rem;
   }
 
@@ -1375,7 +1374,8 @@ body.light-theme {
   }
 
   .education__container {
-      grid-template-columns: repeat(2, 430px);
+      grid-template-columns: repeat(auto-fit, 430px);
+      justify-content: center;
       column-gap: 3rem;
     }
   
